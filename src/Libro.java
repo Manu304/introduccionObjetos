@@ -47,6 +47,7 @@ public class Libro {
     private boolean estado = true;
 
     public Libro() {
+        this(0, 0, null, null, null);
     }
 
     public Libro(int id, int anio, String nombre, String autor, String categoria) {
