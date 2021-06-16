@@ -1,8 +1,48 @@
 package src;
 
+import java.util.Scanner;
+
 public class Persona {
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in);
+        Persona persona1, persona2, persona3;
+        String nombreI = "";
+        float pesoI, alturaI;
+        int edadI;
+        char sexoI;
+        System.out.println("\n--------SOLICITANDO DATOS DE PERSONAS--------\n");
+        System.out.print("Ingrese el nombre de la persona: ");
+        scanner.nextLine();
+        nombreI = scanner.nextLine();
+        System.out.print("Ingrese la edad de la persona: ");
+        edadI = scanner.nextInt();
+        System.out.print("Ingrese el sexo de la persona: ");
+        sexoI = scanner.next().toUpperCase().charAt(0);
+        System.out.print("Ingrese la altura de la persona: ");
+        alturaI = scanner.nextFloat();
+        System.out.print("Ingrese el peso de la persona: ");
+        pesoI = scanner.nextFloat();
+        persona1 = new Persona(nombreI, pesoI, alturaI, edadI, sexoI);
+        persona2 = new Persona(nombreI, edadI, sexoI);
+        persona3 = new Persona();
+        System.out.println("\n------------COMPROBANDO PESO IDEAL------------\n");
+        int persona1IMC = persona1.calcularIMC();
+        int persona2IMC = persona2.calcularIMC();
+        int persona3IMC = persona3.calcularIMC();
+        System.out.println(persona1.getNombre() + " " + mensajePeso(persona1IMC));
+        System.out.println(persona2.getNombre() + " " + mensajePeso(persona2IMC));
+        System.out.println(persona3.getNombre() + " " + mensajePeso(persona3IMC));
+        System.out.println("\n-----------COMPROBANDO MAYORIA DE EDAD---------\n");
+        boolean persona1Mayor = persona1.esMayorDeEdad();
+        boolean persona2Mayor = persona2.esMayorDeEdad();
+        boolean persona3Mayor = persona3.esMayorDeEdad();
+        System.out.println(persona1.getNombre() + " " + mensajeEdad(persona1Mayor));
+        System.out.println(persona2.getNombre() + " " + mensajeEdad(persona2Mayor));
+        System.out.println(persona3.getNombre() + " " + mensajeEdad(persona3Mayor));
+        System.out.println("\n--------INFORMACION DE LAS PERSONAS CREADAS------\n");
+        System.out.println(persona1);
+        System.out.println(persona2);
+        System.out.println(persona3);
     }
 
     private String nombre = "";
@@ -64,6 +104,28 @@ public class Persona {
     private static int aleatorio(int minimo, int maximo) {
         int aleatorio = (int) Math.floor(Math.random() * (maximo - minimo + 1) + minimo);
         return aleatorio;
+    }
+
+    public static String mensajePeso(int IMC) {
+        String mensaje;
+        if (IMC == -1) {
+            mensaje = "Está en su peso ideal";
+        } else if (IMC == 0) {
+            mensaje = "Está por debajo de su peso ideal";
+        } else {
+            mensaje = "Tiene sobrepeso";
+        }
+        return mensaje;
+    }
+
+    public static String mensajeEdad(boolean mayor) {
+        String mensaje;
+        if (mayor == true) {
+            mensaje = "Es mayor de edad";
+        } else {
+            mensaje = "Es menor de edad";
+        }
+        return mensaje;
     }
 
     @Override
