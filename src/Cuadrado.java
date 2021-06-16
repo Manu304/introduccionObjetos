@@ -19,13 +19,7 @@ public class Cuadrado {
         System.out.println("\n------------CALCULANDO AREA Y PERIMETRO----------\n");
         System.out.println("Area del cuadrado: " + ejercicio2.getArea());
         System.out.println("Perimetro del cuadrado: " + ejercicio2.getPerimetro());
-        System.out.println("\n------------CAMBIANDO VALOR DEL LADO-------------\n");
-        System.out.print("Ingrese el nuevo valor: ");
-        double valor2 = scanner.nextDouble();
-        ejercicio2.setLado(valor2);
-        System.out.println("Nuevo lado: " + ejercicio2.getLado() + "\nArea nueva: " + ejercicio2.getArea());
-        System.out.println("Perimetro nuevo: " + ejercicio2.getPerimetro());
-        System.out.println("\n------------------------FIN----------------------\n");
+        System.out.println("\n---------------------FIN-------------------------\n");
     }
 
     private double lado;
