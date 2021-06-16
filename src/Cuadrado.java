@@ -11,9 +11,15 @@ de un lado.
 public class Cuadrado {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        double valor;
         System.out.println("\n-------------CREANDO OBJETO CUADRADO------------\n");
-        System.out.print("Ingrese el lado del cuadrado: ");
-        double valor = scanner.nextDouble();
+        do {
+            System.out.print("Ingrese el lado del cuadrado: ");
+            valor = scanner.nextDouble();
+            if (valor < 0) {
+                System.out.println("No puedes ingresar un valor negativo\n");
+            }
+        } while (valor < 0);
         Cuadrado ejercicio2 = new Cuadrado(valor);
         System.out.println("Se ha creado el cuadrado de lado " + ejercicio2.getLado());
         System.out.println("\n------------CALCULANDO AREA Y PERIMETRO----------\n");
