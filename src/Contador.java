@@ -43,7 +43,7 @@ public class Contador {
     private int contador;
 
     public Contador() {
-        this.contador = 0;
+        this(0);
     }
 
     public Contador(Contador copia){
