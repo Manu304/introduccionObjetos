@@ -23,7 +23,7 @@ public class Contador2 {
         aumentar = scanner.nextInt();
         ejercicio5.incrementarContador(aumentar);
         System.out.println("El contador incrementado es: " + ejercicio5.getContador());
-        System.out.print("Ingrese la cantidad que desea decrementar: ");
+        System.out.print("\nIngrese la cantidad que desea decrementar: ");
         disminuir = scanner.nextInt();
         ejercicio5.decrementarContador(disminuir);
         System.out.println("El contador decrementado es: " + ejercicio5.getContador());
@@ -33,17 +33,17 @@ public class Contador2 {
         valorInicial = scanner.nextInt();
         Contador2 ejemplo2 = new Contador2(valorInicial);
         System.out.println("El contador inicial es: " + ejemplo2.getContador());
-        System.out.print("Ingrese la cantidad que desea incrementar: ");
+        System.out.print("\nIngrese la cantidad que desea incrementar: ");
         aumentar = scanner.nextInt();
         ejemplo2.incrementarContador(aumentar);
         System.out.println("El contador incrementado es: " + ejemplo2.getContador());
-        System.out.print("Ingrese la cantidad que desea decrementar: ");
+        System.out.print("\nIngrese la cantidad que desea decrementar: ");
         disminuir = scanner.nextInt();
         ejemplo2.decrementarContador(disminuir);
         System.out.println("El contador decrementado es: " + ejemplo2.getContador());
 
         System.out.println("\n-------------CAMBIANDO VALOR DEL CONTADOR-----------\n");
-        System.out.print("Ingrese el nuevo valor del contador: ");
+        System.out.print("\nIngrese el nuevo valor del contador: ");
         valorInicial = scanner.nextInt();
         ejercicio5.setContador(valorInicial);
         System.out.println("\nSe ha asignado al contador el valor: " + ejercicio5.getContador());
@@ -51,9 +51,10 @@ public class Contador2 {
 
     }
 
-    private int contador = 0;
+    private int contador;
 
     public Contador2() {
+        this.contador = 0;
     }
 
     public Contador2(int contador) {
@@ -61,7 +62,7 @@ public class Contador2 {
     }
 
     public void incrementarContador(int cantidad){
-        contador += contador;
+        contador += cantidad;
     }
 
     public void decrementarContador(int cantidad){
