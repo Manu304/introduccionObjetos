@@ -12,6 +12,11 @@ los métodos getters y setters.
 public class Contador {
     public static void main(String[] args) {
         Contador ejercicio1 = new Contador();
+        System.out.println("El contador inicial es: " + ejercicio1.getContador());
+        ejercicio1.incrementarContador();
+        System.out.println("El contador incrementado es: " + ejercicio1.getContador());
+        ejercicio1.decrementarContador();
+        System.out.println("El contador decrementado es: " + ejercicio1.getContador());
 
     }
     private int contador = 0;
