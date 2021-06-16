@@ -46,6 +46,10 @@ public class Contador {
         this.contador = 0;
     }
 
+    public Contador(Contador copia){
+        this.contador = copia.getContador();
+    }
+
     public Contador(int contador) {
         this.contador = contador;
     }
