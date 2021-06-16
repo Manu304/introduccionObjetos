@@ -17,7 +17,7 @@ public class Fraccion {
         System.out.print("Ingrese el denomidador de la primera fraccion: ");
         denominadorIngresa = scanner.nextInt();
         fraccion1 = new Fraccion(numeradorIngresa, denominadorIngresa);
-        System.out.print("Ingrese el numerador de la segunda fraccion: ");
+        System.out.print("\nIngrese el numerador de la segunda fraccion: ");
         numeradorIngresa = scanner.nextInt();
         System.out.print("Ingrese el denominador de la segunda fraccion: ");
         denominadorIngresa = scanner.nextInt();
