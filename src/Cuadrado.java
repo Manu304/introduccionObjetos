@@ -1,5 +1,7 @@
 package src;
 
+import java.util.Scanner;
+
 /*
 Cree una clase cuadrado. Esta clase cuenta con los
 métodos de calcular área, calcular perimetro. El
@@ -8,7 +10,22 @@ de un lado.
 */
 public class Cuadrado {
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\n-------------CREANDO OBJETO CUADRADO------------\n");
+        System.out.print("Ingrese el lado del cuadrado: ");
+        double valor = scanner.nextDouble();
+        Cuadrado ejercicio2 = new Cuadrado(valor);
+        System.out.println("Se ha creado el cuadrado de lado " + ejercicio2.getLado());
+        System.out.println("\n------------CALCULANDO AREA Y PERIMETRO----------\n");
+        System.out.println("Area del cuadrado: " + ejercicio2.getArea());
+        System.out.println("Perimetro del cuadrado: " + ejercicio2.getPerimetro());
+        System.out.println("\n------------CAMBIANDO VALOR DEL LADO-------------\n");
+        System.out.print("Ingrese el nuevo valor: ");
+        double valor2 = scanner.nextDouble();
+        ejercicio2.setLado(valor2);
+        System.out.println("Nuevo lado: " + ejercicio2.getLado() + "\nArea nueva: " + ejercicio2.getArea());
+        System.out.println("Perimetro nuevo: " + ejercicio2.getPerimetro());
+        System.out.println("\n------------------------FIN----------------------\n");
     }
 
     private double lado;
