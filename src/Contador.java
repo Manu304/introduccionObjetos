@@ -14,4 +14,29 @@ public class Contador {
         Contador ejercicio1 = new Contador();
 
     }
+    private int contador = 0;
+
+    public Contador(){
+
+    }
+
+    public Contador(int contador) {
+        this.contador = contador;
+    }
+
+    public void incrementarContador(){
+        contador++;
+    }
+
+    public void decrementarContador(){
+        contador--;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+    
 }
