@@ -38,7 +38,7 @@ public class Fraccion {
         restado.mostrar();
         System.out.println("\n---------MULTIPLICACION DE FRACCIONES---------\n");
         fraccion1.mostrar();
-        System.out.print(" × ");
+        System.out.print(" * ");
         fraccion2.mostrar();
         multiplicado = fraccion1.multiplicar(fraccion2);
         System.out.print(" = ");
