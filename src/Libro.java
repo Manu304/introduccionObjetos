@@ -17,26 +17,28 @@ public class Libro {
         System.out.println("\n-----------CREANDO LIBRO CON PARAMETROS-----------\n");
         System.out.print("Ingrese el ID: ");
         idIngresado = scanner.nextInt();
-        System.out.println("Ingrese el nombre: ");
+        System.out.print("Ingrese el nombre: ");
         scanner.nextLine();
         nombreIngresado = scanner.nextLine();
-        System.out.println("Ingrese el autor: ");
+        System.out.print("Ingrese el autor: ");
         autorIngresado = scanner.nextLine();
-        System.out.println("Ingrese el anio de publicacion: ");
+        System.out.print("Ingrese el anio de publicacion: ");
         anioIngresado = scanner.nextInt();
-        System.out.println("Ingrese la categoria: ");
+        System.out.print("Ingrese la categoria: ");
+        scanner.nextLine();
         categoriaIngresada = scanner.nextLine();
         Libro ejercicio6 = new Libro(idIngresado, anioIngresado, nombreIngresado, autorIngresado, categoriaIngresada);
         System.out.println("\n----------MOSTRANDO DATOS DEL LIBRO CREADO--------\n");
         ejercicio6.mostrarInformacion();
         System.out.println("\n-----------------PRESTAMO DEL LIBRO---------------\n");
         ejercicio6.prestar();
-        System.out.println("\n-------MOSTRANDO DATOS DEL LIBRO PRESTADO---------\n");
         ejercicio6.mostrarInformacion();
         System.out.println("\n---------------DEVOLUCION DEL LIBRO---------------\n");
         ejercicio6.devolver();
-        System.out.println("\n-------MOSTRANDO DATOS DEL LIBRO DEVUELTO---------\n");
         ejercicio6.mostrarInformacion();
+        System.out.println("\n------LIBRO CREADO CON CONSTRUCTOR POR DEFECTO-----\n");
+        Libro ejemplo2 = new Libro();
+        ejemplo2.mostrarInformacion();
         System.out.println("\n----------------------FIN-------------------------\n");
     }
 
@@ -45,7 +47,6 @@ public class Libro {
     private boolean estado = true;
 
     public Libro() {
-
     }
 
     public Libro(int id, int anio, String nombre, String autor, String categoria) {
