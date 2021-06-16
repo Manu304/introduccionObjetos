@@ -12,7 +12,32 @@ para establecer.
 
 public class Contador2 {
     public static void main(String[] args) {
-        
 
     }
+
+    private int contador = 0;
+
+    public Contador2() {
+    }
+
+    public Contador2(int contador) {
+        this.contador = contador;
+    }
+
+    public void incrementarContador(){
+        contador++;
+    }
+
+    public void decrementarContador(){
+        contador--;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+
 }
