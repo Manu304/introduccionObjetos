@@ -47,7 +47,7 @@ public class Persona {
     private String nombre = "";
     private float peso, altura;
     private int edad, dni;
-    private char sexo = 'H';
+    private char sexo;
 
     public Persona(String nombre, float peso, float altura, int edad, char sexo) {
         this.nombre = nombre;
