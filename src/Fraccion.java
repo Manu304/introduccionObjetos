@@ -72,9 +72,9 @@ public class Fraccion {
 
     public Fraccion restar(Fraccion fraccion2) {
         Fraccion resta;
+        int denominadorResta = this.denominador * fraccion2.getDenominador();
         int numeradorResta = (this.numerador * fraccion2.getDenominador())
                 - (fraccion2.getNumerador() * this.denominador);
-        int denominadorResta = this.denominador * fraccion2.getDenominador();
         resta = new Fraccion(numeradorResta, denominadorResta);
         resta.simplificar();
         return resta;
