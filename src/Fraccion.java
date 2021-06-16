@@ -45,7 +45,7 @@ public class Fraccion {
         multiplicado.mostrar();
         System.out.println("\n------------DIVISION DE FRACCIONES------------\n");
         fraccion1.mostrar();
-        System.out.print(" × ");
+        System.out.print(" ÷ ");
         fraccion2.mostrar();
         dividido = fraccion1.dividir(fraccion2);
         System.out.print(" = ");
