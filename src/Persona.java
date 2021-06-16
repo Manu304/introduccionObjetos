@@ -17,9 +17,9 @@ public class Persona {
         edadI = scanner.nextInt();
         System.out.print("Ingrese el sexo de la persona: ");
         sexoI = scanner.next().toUpperCase().charAt(0);
-        System.out.print("Ingrese la altura de la persona: ");
+        System.out.print("Ingrese la altura de la persona (metros): ");
         alturaI = scanner.nextFloat();
-        System.out.print("Ingrese el peso de la persona: ");
+        System.out.print("Ingrese el peso de la persona (kilogramos): ");
         pesoI = scanner.nextFloat();
         persona1 = new Persona(nombreI, pesoI, alturaI, edadI, sexoI);
         persona2 = new Persona(nombreI, edadI, sexoI);
@@ -129,8 +129,8 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "DNI: " + dni + "\nNombre: " + nombre + "\nEdad: " + edad + "\nSexo: " + sexo + "\nPeso: " + peso
-                + "\nAltura: " + altura;
+        return "DNI: " + dni + "\nNombre: " + nombre + "\nEdad: " + edad + "\nSexo: " + sexo + "\nPeso: " + peso + " kg"
+                + "\nAltura: " + altura + " m";
     }
 
     public String getNombre() {
