@@ -26,11 +26,11 @@ public class Contador {
         System.out.print("Ingrese un valor inicial para el contador: ");
         int valorInicial = scanner.nextInt();
         Contador ejemplo2 = new Contador(valorInicial);
-        System.out.println("El contador inicial es: " + ejercicio1.getContador());
+        System.out.println("El contador inicial es: " + ejemplo2.getContador());
         ejemplo2.incrementarContador();
-        System.out.println("El contador incrementado es: " + ejercicio1.getContador());
+        System.out.println("El contador incrementado es: " + ejemplo2.getContador());
         ejemplo2.decrementarContador();
-        System.out.println("El contador decrementado es: " + ejercicio1.getContador());
+        System.out.println("El contador decrementado es: " + ejemplo2.getContador());
 
         System.out.println("\n-------------CAMBIANDO VALOR DEL CONTADOR-----------\n");
         System.out.print("Ingrese el nuevo valor del contador: ");
@@ -40,10 +40,10 @@ public class Contador {
         System.out.println("\n---------------------FIN----------------------------\n");
     }
 
-    private int contador = 0;
+    private int contador;
 
     public Contador() {
-
+        this.contador = 0;
     }
 
     public Contador(int contador) {
