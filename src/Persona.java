@@ -12,7 +12,6 @@ public class Persona {
         char sexoI;
         System.out.println("\n--------SOLICITANDO DATOS DE PERSONAS--------\n");
         System.out.print("Ingrese el nombre de la persona: ");
-        scanner.nextLine();
         nombreI = scanner.nextLine();
         System.out.print("Ingrese la edad de la persona: ");
         edadI = scanner.nextInt();
@@ -40,9 +39,9 @@ public class Persona {
         System.out.println(persona2.getNombre() + " " + mensajeEdad(persona2Mayor));
         System.out.println(persona3.getNombre() + " " + mensajeEdad(persona3Mayor));
         System.out.println("\n--------INFORMACION DE LAS PERSONAS CREADAS------\n");
-        System.out.println(persona1);
-        System.out.println(persona2);
-        System.out.println(persona3);
+        System.out.println(persona1 + "\n");
+        System.out.println(persona2 + "\n");
+        System.out.println(persona3 + "\n");
     }
 
     private String nombre = "";
