@@ -19,10 +19,10 @@ public class Rectangulo {
             System.out.print("Ingrese el largo del rectangulo: ");
             largoRec = scanner.nextDouble();
             if (anchoRec == largoRec) {
-                System.out.println("El ancho no puede ser igual al largo!");
+                System.out.println("\nEl ancho no puede ser igual al largo!\n");
             }
             if ((anchoRec < 0) || (largoRec < 0)) {
-                System.out.println("No puedes ingresar valores negativos");
+                System.out.println("\nNo puedes ingresar valores negativos\n");
             }
         } while ((anchoRec == largoRec) || (anchoRec < 0) || (largoRec < 0));
         Rectangulo ejercicio4 = new Rectangulo(anchoRec, largoRec);
