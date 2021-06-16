@@ -27,9 +27,9 @@ public class Contador {
         int valorInicial = scanner.nextInt();
         Contador ejemplo2 = new Contador(valorInicial);
         System.out.println("El contador inicial es: " + ejercicio1.getContador());
-        ejercicio1.incrementarContador();
+        ejemplo2.incrementarContador();
         System.out.println("El contador incrementado es: " + ejercicio1.getContador());
-        ejercicio1.decrementarContador();
+        ejemplo2.decrementarContador();
         System.out.println("El contador decrementado es: " + ejercicio1.getContador());
 
         System.out.println("\n-------------CAMBIANDO VALOR DEL CONTADOR-----------\n");
