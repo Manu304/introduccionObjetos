@@ -11,25 +11,25 @@ public class Cuadrado {
 
     }
 
-    private float lado;
+    private double lado;
 
-    public Cuadrado(float lado) {
+    public Cuadrado(double lado) {
         this.lado = lado;
     }
 
-    public float perimetro(){
+    public double getPerimetro(){
         return 4*lado;
     }
 
-    public float area(){
+    public double getArea(){
         return lado*lado;
     }
 
-    public float getLado() {
+    public double getLado() {
         return lado;
     }
 
-    public void setLado(float lado) {
+    public void setLado(double lado) {
         this.lado = lado;
     }
 
