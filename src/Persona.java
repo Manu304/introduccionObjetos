@@ -60,7 +60,6 @@ public class Persona {
 
     public Persona(String nombre, int edad, char sexo) {
         this(nombre, 0, 0, edad, sexo);
-        this.dni = generarDNI();
     }
 
     public Persona() {
