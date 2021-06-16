@@ -49,10 +49,6 @@ public class Persona {
     private int edad, dni;
     private char sexo = 'H';
 
-    public Persona() {
-        this.dni = generarDNI();
-    }
-
     public Persona(String nombre, float peso, float altura, int edad, char sexo) {
         this.nombre = nombre;
         this.peso = peso;
@@ -63,10 +59,12 @@ public class Persona {
     }
 
     public Persona(String nombre, int edad, char sexo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = comprobarSexo(sexo);
+        this(nombre, 0, 0, edad, sexo);
         this.dni = generarDNI();
+    }
+
+    public Persona() {
+        this(" ", 0, 'H');
     }
 
     public int calcularIMC() {
